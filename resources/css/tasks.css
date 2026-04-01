@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #333;
+}
+
+.hidden { display: none; }
+
+/* Landing Page */
+#landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#landing h1 { font-size: 3rem; margin-bottom: 20px; }
+#landing p { font-size: 1.2rem; margin-bottom: 40px; }
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ffcc33, #ff7e5f);
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover { transform: scale(1.1); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+/* Dashboard */
+#app {
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#app.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header { text-align: center; color: white; margin-bottom: 20px; }
+.controls { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 20px; }
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    min-width: 250px;
+}
+
+input, select, button { padding: 10px; margin: 5px 0; border-radius: 8px; border: 1px solid #ccc; width: 100%; }
+
+.btn-primary { background: #4facfe; color: white; border: none; }
+.btn-success { background: #28a745; color: white; border: none; }
+.btn-danger { background: #ff4d4d; color: white; border: none; }
+
+.priority-high { color: red; font-weight: bold; }
+.priority-medium { color: orange; font-weight: bold; }
+.priority-low { color: green; font-weight: bold; }
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.pending { background: gray; }
+.in_progress { background: orange; }
+.done { background: green; }
+
+.task-list .card { margin-bottom: 15px; }
+
+.flex { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+
+pre { background: #f8f9fa; padding: 10px; border-radius: 8px; overflow-x: auto; }
